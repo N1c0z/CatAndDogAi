@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CatAndDogAiML.ConsoleApp\**" />
+    <Compile Remove="CatAndDogAiML.Model\**" />
+    <EmbeddedResource Remove="CatAndDogAiML.ConsoleApp\**" />
+    <EmbeddedResource Remove="CatAndDogAiML.Model\**" />
+    <None Remove="CatAndDogAiML.ConsoleApp\**" />
+    <None Remove="CatAndDogAiML.Model\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="CatAndDogAiML.Model\CatAndDogAiML.Model.csproj" />
+  </ItemGroup>
+
+</Project>
