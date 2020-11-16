@@ -7,27 +7,35 @@ namespace CatAndDogAi
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("------------\r\n| By Nico. | \r\n------------\r\n");
             string answer;
             bool DoWhile = true;
             do
             {
-                // Add input data
-                var input = new ModelInput();
-                Console.WriteLine("Insert file directory");
-                Console.Write("<user>:");
-                input.ImageSource = Convert.ToString(Console.ReadLine());
-                ModelOutput result = ConsumeModel.Predict(input);
-                Console.Write("\r\n");
-                Console.WriteLine($"Result:{result.Prediction}");
-                Console.WriteLine($"Continue? (Y/N)");
-                Console.Write("<user>:");
-                answer = Convert.ToString(Console.ReadLine());
-                
-                if (answer.ToLower() == "n")
+                try
                 {
-                    DoWhile = false;
+                    // Add input data
+                    var input = new ModelInput();
+                    Console.WriteLine("Insert file directory");
+                    Console.Write("<user>:");
+                    input.ImageSource = Convert.ToString(Console.ReadLine());
+                    ModelOutput result = ConsumeModel.Predict(input);
+                    Console.Write("\r\n");
+                    Console.WriteLine($"Result:{result.Prediction} Accuracy {result.Score}");
+                    Console.WriteLine($"Continue? (Y/N)");
+                    Console.Write("<user>:");
+                    answer = Convert.ToString(Console.ReadLine());
+
+                    if (answer.ToLower() == "n")
+                    {
+                        DoWhile = false;
+                    }
                 }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine("Exception found: " + e);
+                }
+                
             } while (DoWhile);
         }
     }

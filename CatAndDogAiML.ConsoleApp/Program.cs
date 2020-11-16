@@ -11,7 +11,7 @@ namespace CatAndDogAiML.ConsoleApp
     class Program
     {
         //Dataset to use for predictions 
-        private const string DATA_FILEPATH = @"C:\Users\Nico\AppData\Local\Temp\554f7d48-f604-45a1-9b9c-4746565edff6.tsv";
+        private const string DATA_FILEPATH = @"\554f7d48-f604-45a1-9b9c-4746565edff6.tsv";
 
         static void Main(string[] args)
         {

@@ -13,7 +13,7 @@ namespace CatAndDogAiML.ConsoleApp
 {
     public static class ModelBuilder
     {
-        private static string TRAIN_DATA_FILEPATH = @"C:\Users\Nico\AppData\Local\Temp\554f7d48-f604-45a1-9b9c-4746565edff6.tsv";
+        private static string TRAIN_DATA_FILEPATH = @"\554f7d48-f604-45a1-9b9c-4746565edff6.tsv";
         private static string MODEL_FILEPATH = @"../../../../CatAndDogAiML.Model/MLModel.zip";
 
         // Create MLContext to be shared across the model creation workflow objects 
